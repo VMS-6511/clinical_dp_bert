@@ -4,7 +4,9 @@ Note that in each of the repos you must follow the path of /models/official/nlp/
 
 ## Environment Setup
 
-Create a conda environment with the name of your choice using the ```requirements.txt``` file that has been provided. We chose ```dp_bert`` which is used in our scripts as well. Thus if you use a different environment name you will have to make the required changes in the bash scripts. Also make sure that you have CUDA 10.1 and cuDNN 7.0 installed as these are the drivers we are using with Tensorflow 2.0.
+Create a conda environment with the name of your choice using the ```requirements.txt``` file that has been provided. We chose ```dp_bert``` which is used in our scripts as well. Thus if you use a different environment name you will have to make the required changes in the bash scripts. Also make sure that you have CUDA 10.1 and cuDNN 7.0 installed as these are the drivers we are using with Tensorflow 2.0. Once you have created this environment run this command to install the TF Privacy Library:
+
+``` pip install -e privacy```
 
 ## Data Preprocessing
 
@@ -21,7 +23,7 @@ After this, you must run the ```./create_finetuning_data.sh``` script in the ```
 
 ## ClinicalBERT Initialization
 
-You will need to download the TF 1.x checkpoint from this link that was trained on BioBERT and all of the MIMIC clinical notes. From here you will need to use the ```tf2_encoder_checkpoint_converter.py``` script to convert the TF 1.x checkpoint into a TF 2.0 checkpoint that can be used as the starting point for this implementation.
+You will need to download the TF 1.x checkpoint from this [link](https://github.com/EmilyAlsentzer/clinicalBERT) that was trained on BioBERT and all of the MIMIC clinical notes. From here you will need to use the ```tf2_encoder_checkpoint_converter.py``` script to convert the TF 1.x checkpoint into a TF 2.0 checkpoint that can be used as the starting point for this implementation.
 
 ## Running the No Privacy Finetuning Baselines
 
@@ -41,7 +43,15 @@ First, off we would like to thank and indicate the work that we built upon from 
 
 Below are the links to the original repos:
 
+[Tensorflow Models Repository](https://github.com/tensorflow/models)
 
+[TF Privacy Repository](https://github.com/tensorflow/privacy)
+
+## Contributors
+
+Vinith M. Suriyakumar,
+Nathan Ng,
+Robert Grant
 
 
 
