@@ -1,0 +1,6 @@
+{
+    "total_training_steps": 1845,
+    "train_loss": 0.3639315366744995,
+    "last_train_metrics": 1.0,
+    "eval_metrics": 0.5464880466461182
+}
