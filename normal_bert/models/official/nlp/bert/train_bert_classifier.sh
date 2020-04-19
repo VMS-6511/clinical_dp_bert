@@ -1,8 +1,8 @@
 #!/bin/bash
 source ~/.bashrc
-source activate dp_bert
+source activate dp_bert_2
 
-export PYTHONPATH=$PYTHONPATH:/h/vinithms/normal_bert/models
+export PYTHONPATH=$PYTHONPATH:/h/vinithms/clinical_dp_bert/normal_bert/models
 export CLINBERT_DIR=/scratch/hdd001/home/vinithms/pretrained_bert_tf/biobert_pretrain_output_all_notes_150000
 export TASK=$1
 export RANDOM_SEED=$2
@@ -20,7 +20,7 @@ python run_classifier.py \
   --train_data_path=${MIMIC_OUTPUT_DIR}/${TASK}_train.tf_record \
   --eval_data_path=${MIMIC_OUTPUT_DIR}/${TASK}_eval.tf_record \
   --bert_config_file=${CLINBERT_DIR}/bert_config.json \
-  --init_checkpoint=${CLINBERT_DIR}/tf2/model.ckpt-1 \
+  --init_checkpoint=${CLINBERT_DIR}/tf2/model.ckpt \
   --train_batch_size=4 \
   --eval_batch_size=4 \
   --steps_per_loop=1 \
