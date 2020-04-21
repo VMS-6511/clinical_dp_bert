@@ -10,7 +10,7 @@ Create a conda environment with the name of your choice using the ```requirement
 
 ## Data Preprocessing
 
-You must have access to the MIMIC-III database which requires completion of the CITI certificate. Once this has been done you must create an instance of the MIMIC database on your computer. This requires about 50GB of space and more instructions can be found here.
+You must have access to the [MIMIC-III database](https://mimic.physionet.org/) which requires completion of the CITI certificate. Once this has been done you must create an instance of the MIMIC database on your computer. This requires about 50GB of space and more instructions can be found here.
 After this you can run this specific SQL query and save to a CSV file:
 
 ``` SELECT * FROM NOTEEVENTS ```
